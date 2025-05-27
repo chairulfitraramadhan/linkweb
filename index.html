@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linktree Saya</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 680px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .profile-section {
+            margin-bottom: 32px;
+        }
+        
+        .profile-image {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: #666;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="%23666" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>');
+            background-size: 40px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .profile-name {
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .profile-bio {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .link-item {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 24px;
+            padding: 16px 24px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            min-height: 56px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .link-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            background: white;
+        }
+        
+        .link-icon {
+            font-size: 18px;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .instagram { color: #E4405F; }
+        .youtube { color: #FF0000; }
+        .tiktok { color: #000000; }
+        .twitter { color: #1DA1F2; }
+        .linkedin { color: #0077B5; }
+        .website { color: #333; }
+        .email { color: #EA4335; }
+        .whatsapp { color: #25D366; }
+        .github { color: #333; }
+        .telegram { color: #0088CC; }
+        
+        .footer {
+            margin-top: 48px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 12px;
+        }
+        
+        .footer a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+            
+            .link-item {
+                padding: 14px 20px;
+                font-size: 13px;
+            }
+        }
+        
+        /* Animasi fade in */
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .link-item:nth-child(1) { animation-delay: 0.1s; }
+        .link-item:nth-child(2) { animation-delay: 0.2s; }
+        .link-item:nth-child(3) { animation-delay: 0.3s; }
+        .link-item:nth-child(4) { animation-delay: 0.4s; }
+        .link-item:nth-child(5) { animation-delay: 0.5s; }
+        .link-item:nth-child(6) { animation-delay: 0.6s; }
+        .link-item:nth-child(7) { animation-delay: 0.7s; }
+        .link-item:nth-child(8) { animation-delay: 0.8s; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-section fade-in">
+            <div class="profile-image"></div>
+            <h1 class="profile-name">Chairul Fitra Ramadhan</h1>
+            <p class="profile-bio">Beginner Data Scientist & AI Enthusiast | Students At Mikroskil University</p>
+        </div>
+        
+        <div class="links-container">
+            <!-- Ganti dengan link platform Anda -->
+            <a href="https://instagram.com/chfitraa" class="link-item fade-in" target="_blank">
+                <i class="fab fa-instagram instagram link-icon"></i>
+                <span>Follow me on Instagram</span>
+            </a>
+            
+            <a href="https://youtube.com/@username" class="link-item fade-in" target="_blank">
+                <i class="fab fa-youtube youtube link-icon"></i>
+                <span>Subscribe to my YouTube</span>
+            </a>
+            
+            <a href="https://tiktok.com/@chfitra" class="link-item fade-in" target="_blank">
+                <i class="fab fa-tiktok tiktok link-icon"></i>
+                <span>Follow me on TikTok</span>
+            </a>
+            
+            <a href="https://twitter.com/chairul_fitra23" class="link-item fade-in" target="_blank">
+                <i class="fab fa-twitter twitter link-icon"></i>
+                <span>Follow me on Twitter</span>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/chairul-fitra-ramadhan-070958256/" class="link-item fade-in" target="_blank">
+                <i class="fab fa-linkedin linkedin link-icon"></i>
+                <span>Connect on LinkedIn</span>
+            </a>
+            
+            <a href="https://yourwebsite.com" class="link-item fade-in" target="_blank">
+                <i class="fas fa-globe website link-icon"></i>
+                <span>Visit my Website</span>
+            </a>
+            
+            <a href="mailto:chairulfitrar@gmail.com" class="link-item fade-in">
+                <i class="fas fa-envelope email link-icon"></i>
+                <span>Send me an Email</span>
+            </a>
+            
+            <a href="https://wa.me/6281335881020" class="link-item fade-in" target="_blank">
+                <i class="fab fa-whatsapp whatsapp link-icon"></i>
+                <span>Chat on WhatsApp</span>
+            </a>
+        </div>
+        
+        <div class="footer fade-in">
+            <p>Made with ❤️</p>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scroll dan animasi
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tambahkan kelas fade-in dengan delay
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    el.style.transition = 'all 0.6s ease-out';
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+            
+            // Analytics sederhana (opsional)
+            const links = document.querySelectorAll('.link-item');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const platform = this.querySelector('span').textContent;
+                    console.log(`Link clicked: ${platform}`);
+                    // Di sini Anda bisa menambahkan Google Analytics atau tracking lainnya
+                });
+            });
+        });
+        
+        // Tambahkan efek parallax ringan
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const container = document.querySelector('.container');
+            container.style.transform = `translateY(${scrolled * 0.1}px)`;
+        });
+    </script>
+</body>
+</html>
